@@ -4,7 +4,7 @@ on:
     branches:
       - 'develop'
     paths:
-      - "."
+      - "**"
 
 env:
   AWS_DEFAULT_REGION: 'ap-southeast-2'
@@ -22,15 +22,12 @@ jobs:
           python-version: 3.9
 
       - name: Install dependencies
-        working-directory: "."
         run: pip install pipenv && pipenv install --dev
 
       - name: Run Unit tests
-        working-directory: "."
         run: pipenv run pytest tests/
 
       - name: Lint Test
-        working-directory: "."
         run: pipenv run pylint --recursive=y .
 
       - name: Configure AWS Credentials
