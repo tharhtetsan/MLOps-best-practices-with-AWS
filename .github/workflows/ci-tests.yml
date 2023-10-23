@@ -21,7 +21,11 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.9
-
+          
+      - name: Install dependencies
+        working-directory: "."
+        run: pip install pipenv && pipenv install --dev   
+      
       - name: Run Unit tests
         working-directory: "."
         run: pipenv run pytest tests/
@@ -38,10 +42,7 @@ jobs:
           aws-region: ${{ env.AWS_DEFAULT_REGION }}
 
 
-      - name: Install dependencies
-        working-directory: "."
-        run: pip install pipenv && pipenv install --dev   
-      
+
       - name: Integration Test
         working-directory: 'integration-test'
         run: |
