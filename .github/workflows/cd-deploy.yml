@@ -47,7 +47,7 @@ jobs:
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image-step
-        working-directory: "06-best-practices/code"
+        working-directory: "."
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ steps.tf-apply.outputs.ecr_repo }}
@@ -65,7 +65,7 @@ jobs:
         # In practice, you would also have a separate training pipeline to write new model artifacts to your Model Bucket in Prod.
 
         id: get-model-artifacts
-        working-directory: "06-best-practices/code"
+        working-directory: "."
         env:
           MODEL_BUCKET_DEV: "mlflow-models-alexey"
           MODEL_BUCKET_PROD: ${{ steps.tf-apply.outputs.model_bucket }}
