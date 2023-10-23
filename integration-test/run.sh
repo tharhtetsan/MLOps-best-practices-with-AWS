@@ -3,8 +3,12 @@ if [[ -z "${GITHUB_ACTIONS}" ]]; then
    echo "$(dirname "$0")"
   cd "$(dirname "$0")"
 fi
+
 echo "${GITHUB_ACTIONS}"
+echo "$(dirname "$0")"
 echo "##############################################"
+
+
 
 if [ "${LOCAL_IMAGE_NAME}" == "" ]; then
     LOCAL_TAG=`date +"%Y-%m-%d-%H-%M"`
