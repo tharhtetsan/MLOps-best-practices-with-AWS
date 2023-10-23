@@ -23,7 +23,7 @@ jobs:
           python-version: 3.9
 
       - name: Install dependencies
-        working-directory: "06-best-practices/code"
+        working-directory: "."
         run: pip install pipenv && pipenv install --dev   
       
       - name: Integration Test
