@@ -33,7 +33,7 @@ jobs:
         working-directory: "."
         run: pipenv run pylint --recursive=y .
 
-      - name: Configure AWS Credentials test
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
