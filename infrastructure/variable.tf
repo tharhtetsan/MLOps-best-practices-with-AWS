@@ -6,7 +6,7 @@ variable  "aws_region" {
 
 variable "project_id" {
   type        = string
-  default     = "mlops-zoomcamp"
+  default     = "007"
   description = "Project ID"
 }
 
