@@ -31,7 +31,7 @@ ls -la
 echo $PWD
 
 
-pipenv run python test_docker.py
+pipenv run python test-docker.py
 
 ERROR_CODE=$?
 
@@ -42,7 +42,7 @@ if [ ${ERROR_CODE} != 0 ]; then
 fi
 
 
-pipenv run python test_kinesis.py
+pipenv run python test-kinesis.py
 
 ERROR_CODE=$?
 
