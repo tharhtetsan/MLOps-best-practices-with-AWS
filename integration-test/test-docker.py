@@ -12,6 +12,8 @@ with open("event_response.json", "rt", encoding="utf-8") as f_in:
 
 url = "http://localhost:8080/2015-03-31/functions/function/invocations"
 
+#pylint: disable=missing-timeout
+#pylint: disable=consider-using-f-string
 actual_response = requests.post(url, json=event).json()
 print(actual_response)
 diff = DeepDiff(actual_response, expected_response)
