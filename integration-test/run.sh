@@ -8,7 +8,7 @@ fi
 echo "${GITHUB_ACTIONS}"
 echo "$(dirname "$0")"
 echo "##############################################"
-/home/runner/work/_temp
+
 
 
 if [ "${LOCAL_IMAGE_NAME}" == "" ]; then
