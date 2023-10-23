@@ -23,7 +23,7 @@ jobs:
           python-version: 3.9
 
       - name: Integration Test
-        working-directory: 'integration-test'
+        working-directory: '.'
         run: |
-          . run.sh
+          . integration-test/run.sh
 
