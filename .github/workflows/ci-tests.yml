@@ -45,5 +45,5 @@ jobs:
       - name: Integration Test
         working-directory: 'integration-test'
         run: |
-          ls -la
+          . run.sh
 
