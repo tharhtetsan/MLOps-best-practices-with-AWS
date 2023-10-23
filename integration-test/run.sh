@@ -20,7 +20,9 @@ aws --endpoint-url=http://localhost:4566 \
     --stream-name ${PREDICTIONS_STREAM_NAME} \
     --shard-count 1
 
-cd ..
+echo $PWD
+echo $PWD
+
 
 pipenv run python test_docker.py
 
