@@ -32,13 +32,6 @@ aws --endpoint-url=http://localhost:4566 \
     --shard-count 1
 
 
-echo $PWD
-cd ..
-echo $PWD
-cd ..
-echo $PWD
-
-
 pipenv run python integration-test/test_docker.py
 
 ERROR_CODE=$?
