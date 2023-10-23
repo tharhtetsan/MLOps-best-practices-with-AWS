@@ -73,7 +73,7 @@ module "lambda_function" {
 
 }
 
-# For CI/CD
+# For CI/CD test
 output "lambda_function" {
   value     = "${var.lambda_function_name}_${var.project_id}"
 }
