@@ -13,6 +13,8 @@ else
     echo "no need to build image ${LOCAL_IMAGE_NAME}"
 fi
 
+
+
 export PREDICTIONS_STREAM_NAME="ride_predictions"
 
 docker-compose up -d
@@ -23,6 +25,11 @@ aws --endpoint-url=http://localhost:4566 \
     kinesis create-stream \
     --stream-name ${PREDICTIONS_STREAM_NAME} \
     --shard-count 1
+
+echo ls -la
+echo ls -la
+echo $PWD
+
 
 pipenv run python integration-test/test_docker.py
 
